@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffc0cb; /* Pink background */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+    text-align: center;
+    width: 100%; /* Ensure the container takes full width */
+    height: 100vh; /* Make the container fill the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+#heartButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+#heartButton:hover {
+    background-color: #ff6b81;
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px; /* Increased size for the heart */
+    color: #ff4757;
+    pointer-events: none; /* Ensure the heart doesn't interfere with button clicks */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden {
+    display: none !important; /* Force the element to be hidden */
+}
+
+#nextPart {
+    width: 100%; /* Ensure the next part takes full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Add some space below the button */
+}
+
+#nextPart h1 {
+    margin-top: 0; /* Remove excessive top margin */
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #333; /* Darker color for better visibility */
+}
+
+#nextPart p {
+    margin-top: 10px; /* Spacing below the heading */
+    font-size: 1.2rem; /* Slightly larger font size for the paragraph */
+    color: #555; /* Slightly lighter color for the paragraph */
+}
+
+/* Image grid layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Reduce space between images */
+    justify-items: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    max-width: 80vw; /* Ensure the grid fits within the viewport */
+    margin: 0 auto; /* Center the grid */
+    margin-top: 20px; /* Add space below the text */
+}
+
+.image-grid img {
+    max-width: 200px; /* Set a smaller max-width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
